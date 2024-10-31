@@ -1,2 +1,5 @@
+.gitignore
 env
 .pytest_cache
+logs/*.log
+app/__pycache__
