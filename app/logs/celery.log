@@ -1,0 +1,413 @@
+[2024-10-31 20:13:55,771: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2024-10-31 20:13:55,773: DEBUG/MainProcess] | Worker: Building graph...
+[2024-10-31 20:13:55,774: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
+[2024-10-31 20:13:55,782: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2024-10-31 20:13:55,782: DEBUG/MainProcess] | Consumer: Building graph...
+[2024-10-31 20:13:55,794: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Tasks, Control, Gossip, Agent, event loop}
+[2024-10-31 20:13:55,805: DEBUG/MainProcess] | Worker: Starting Hub
+[2024-10-31 20:13:55,805: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:55,806: DEBUG/MainProcess] | Worker: Starting Pool
+[2024-10-31 20:13:56,756: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:56,757: DEBUG/MainProcess] | Worker: Starting Consumer
+[2024-10-31 20:13:56,757: DEBUG/MainProcess] | Consumer: Starting Connection
+[2024-10-31 20:13:56,760: WARNING/MainProcess] /usr/local/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-31 20:13:56,773: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-31 20:13:56,773: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:56,773: DEBUG/MainProcess] | Consumer: Starting Events
+[2024-10-31 20:13:56,773: WARNING/MainProcess] /usr/local/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-31 20:13:56,776: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:56,776: DEBUG/MainProcess] | Consumer: Starting Heart
+[2024-10-31 20:13:56,780: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:56,780: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2024-10-31 20:13:56,780: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-31 20:13:57,792: INFO/MainProcess] mingle: all alone
+[2024-10-31 20:13:57,792: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:57,792: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2024-10-31 20:13:57,795: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:57,795: DEBUG/MainProcess] | Consumer: Starting Control
+[2024-10-31 20:13:57,800: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:57,800: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2024-10-31 20:13:57,803: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:13:57,803: DEBUG/MainProcess] | Consumer: Starting event loop
+[2024-10-31 20:13:57,804: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2024-10-31 20:13:57,804: INFO/MainProcess] celery@0513c0d470a0 ready.
+[2024-10-31 20:13:57,805: DEBUG/MainProcess] basic.qos: prefetch_count->64
+[2024-10-31 20:14:01,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:01,170: INFO/MainProcess] Events of group {task} enabled by remote.
+[2024-10-31 20:14:06,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:11,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:16,170: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:21,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:26,170: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:31,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:36,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:36,760: INFO/MainProcess] Task add_numbers[a881e3dd-a944-4c49-b0ad-e08800620229] received
+[2024-10-31 20:14:36,761: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x7888e9243600> (args:('add_numbers', 'a881e3dd-a944-4c49-b0ad-e08800620229', {'lang': 'py', 'task': 'add_numbers', 'id': 'a881e3dd-a944-4c49-b0ad-e08800620229', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a881e3dd-a944-4c49-b0ad-e08800620229', 'parent_id': None, 'argsrepr': '(500, 700)', 'kwargsrepr': '{}', 'origin': 'gen8@466f831b3c2b', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'properties': {'correlation_id': 'a881e3dd-a944-4c49-b0ad-e08800620229', 'reply_to': 'f9a95c20-df32-3a7a-860b-fa7fd4457331', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'celery'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': '28485e94-af91-46d6-a7a0-9ccf6e14c521'}, 'reply_to': 'f9a95c20-df32-3a7a-860b-fa7fd4457331', 'correlation_id': 'a881e3dd-a944-4c49-b0ad-e08800620229', 'hostname': 'celery@0513c0d470a0', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0,... kwargs:{})
+[2024-10-31 20:14:36,764: INFO/ForkPoolWorker-15] 500
+[2024-10-31 20:14:36,764: INFO/ForkPoolWorker-15] 501
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 502
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 503
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 504
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 505
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 506
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 507
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 508
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 509
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 510
+[2024-10-31 20:14:36,765: INFO/ForkPoolWorker-15] 511
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 512
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 513
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 514
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 515
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 516
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 517
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 518
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 519
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 520
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 521
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 522
+[2024-10-31 20:14:36,766: INFO/ForkPoolWorker-15] 523
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 524
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 525
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 526
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 527
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 528
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 529
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 530
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 531
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 532
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 533
+[2024-10-31 20:14:36,767: INFO/ForkPoolWorker-15] 534
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 535
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 536
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 537
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 538
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 539
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 540
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 541
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 542
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 543
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 544
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 545
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 546
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 547
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 548
+[2024-10-31 20:14:36,768: INFO/ForkPoolWorker-15] 549
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 550
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 551
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 552
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 553
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 554
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 555
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 556
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 557
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 558
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 559
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 560
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 561
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 562
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 563
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 564
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 565
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 566
+[2024-10-31 20:14:36,769: INFO/ForkPoolWorker-15] 567
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 568
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 569
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 570
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 571
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 572
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 573
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 574
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 575
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 576
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 577
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 578
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 579
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 580
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 581
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 582
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 583
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 584
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 585
+[2024-10-31 20:14:36,770: INFO/ForkPoolWorker-15] 586
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 587
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 588
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 589
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 590
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 591
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 592
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 593
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 594
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 595
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 596
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 597
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 598
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 599
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 600
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 601
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 602
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 603
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 604
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 605
+[2024-10-31 20:14:36,771: INFO/ForkPoolWorker-15] 606
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 607
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 608
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 609
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 610
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 611
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 612
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 613
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 614
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 615
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 616
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 617
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 618
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 619
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 620
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 621
+[2024-10-31 20:14:36,772: INFO/ForkPoolWorker-15] 622
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 623
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 624
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 625
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 626
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 627
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 628
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 629
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 630
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 631
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 632
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 633
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 634
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 635
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 636
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 637
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 638
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 639
+[2024-10-31 20:14:36,773: INFO/ForkPoolWorker-15] 640
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 641
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 642
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 643
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 644
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 645
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 646
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 647
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 648
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 649
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 650
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 651
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 652
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 653
+[2024-10-31 20:14:36,774: INFO/ForkPoolWorker-15] 654
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 655
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 656
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 657
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 658
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 659
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 660
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 661
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 662
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 663
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 664
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 665
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 666
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 667
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 668
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 669
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 670
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 671
+[2024-10-31 20:14:36,775: INFO/ForkPoolWorker-15] 672
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 673
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 674
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 675
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 676
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 677
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 678
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 679
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 680
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 681
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 682
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 683
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 684
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 685
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 686
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 687
+[2024-10-31 20:14:36,776: INFO/ForkPoolWorker-15] 688
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 689
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 690
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 691
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 692
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 693
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 694
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 695
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 696
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 697
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 698
+[2024-10-31 20:14:36,777: INFO/ForkPoolWorker-15] 699
+[2024-10-31 20:14:41,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:44,860: INFO/MainProcess] Task send_email[96a26436-cfbf-4f33-9805-735648b44143] received
+[2024-10-31 20:14:44,861: DEBUG/MainProcess] TaskPool: Apply <function fast_trace_task at 0x7888e9243600> (args:('send_email', '96a26436-cfbf-4f33-9805-735648b44143', {'lang': 'py', 'task': 'send_email', 'id': '96a26436-cfbf-4f33-9805-735648b44143', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '96a26436-cfbf-4f33-9805-735648b44143', 'parent_id': None, 'argsrepr': "('ejemplo@celery.com', 'esto es otra prueba de envio de correo')", 'kwargsrepr': '{}', 'origin': 'gen8@466f831b3c2b', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}, 'properties': {'correlation_id': '96a26436-cfbf-4f33-9805-735648b44143', 'reply_to': 'f9a95c20-df32-3a7a-860b-fa7fd4457331', 'delivery_mode': 2, 'delivery_info': {'exchange': '', 'routing_key': 'celery'}, 'priority': 0, 'body_encoding': 'base64', 'delivery_tag': '5cf9f596-1d07-4a1c-8d8c-712f5937b0e6'}, 'reply_to': 'f9a95c20-df32-3a7a-860b-fa7fd4457331', 'correlation_id': '96a26436-cfbf-4f33-9805-735648b44143', 'hostname': 'celery@0513c0d470a0', 'delivery_info':... kwargs:{})
+[2024-10-31 20:14:44,863: INFO/ForkPoolWorker-16] Enviando email a ejemplo@celery.com
+[2024-10-31 20:14:46,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:51,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:14:56,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:01,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:06,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:11,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:16,170: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:21,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:26,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:31,167: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:36,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:36,784: INFO/ForkPoolWorker-15] Task add_numbers[a881e3dd-a944-4c49-b0ad-e08800620229] succeeded in 60.020695095998235s: {'number': 1200}
+[2024-10-31 20:15:41,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:44,868: INFO/ForkPoolWorker-16] Task send_email[96a26436-cfbf-4f33-9805-735648b44143] succeeded in 60.005054836001364s: 'Correo enviado a ejemplo@celery.com con mensaje esto es otra prueba de envio de correo'
+[2024-10-31 20:15:46,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:51,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:15:56,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:01,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:06,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:11,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:16,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:21,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:26,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:31,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:36,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:41,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:46,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:51,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:16:56,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:01,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:06,170: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:11,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:16,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:21,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:26,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:31,167: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:36,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:41,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:46,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:51,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:17:56,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:18:01,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:18:06,171: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:18:11,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:18:16,169: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:18:21,168: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2024-10-31 20:18:23,141: DEBUG/MainProcess] | Worker: Closing Hub...
+[2024-10-31 20:18:23,141: DEBUG/MainProcess] | Worker: Closing Pool...
+[2024-10-31 20:18:23,141: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Events...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Control...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2024-10-31 20:18:23,142: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2024-10-31 20:18:23,145: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2024-10-31 20:18:23,146: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2024-10-31 20:18:23,147: DEBUG/MainProcess] Canceling task consumer...
+[2024-10-31 20:18:23,147: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2024-10-31 20:18:23,147: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2024-10-31 20:18:23,147: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2024-10-31 20:18:23,148: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2024-10-31 20:18:23,148: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2024-10-31 20:18:24,174: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2024-10-31 20:18:24,174: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2024-10-31 20:18:24,174: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2024-10-31 20:18:24,174: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2024-10-31 20:18:24,175: DEBUG/MainProcess] Canceling task consumer...
+[2024-10-31 20:18:24,175: DEBUG/MainProcess] Closing consumer channel...
+[2024-10-31 20:18:24,175: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2024-10-31 20:18:24,175: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2024-10-31 20:18:24,175: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2024-10-31 20:18:24,177: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2024-10-31 20:18:29,071: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2024-10-31 20:18:29,074: DEBUG/MainProcess] | Worker: Building graph...
+[2024-10-31 20:18:29,074: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2024-10-31 20:18:29,083: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2024-10-31 20:18:29,083: DEBUG/MainProcess] | Consumer: Building graph...
+[2024-10-31 20:18:29,101: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Mingle, Gossip, Tasks, Control, Heart, event loop}
+[2024-10-31 20:18:29,117: DEBUG/MainProcess] | Worker: Starting Hub
+[2024-10-31 20:18:29,117: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:29,117: DEBUG/MainProcess] | Worker: Starting Pool
+[2024-10-31 20:18:30,087: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:30,088: DEBUG/MainProcess] | Worker: Starting Consumer
+[2024-10-31 20:18:30,089: DEBUG/MainProcess] | Consumer: Starting Connection
+[2024-10-31 20:18:30,091: WARNING/MainProcess] /usr/local/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-31 20:18:30,102: INFO/MainProcess] Connected to redis://redis:6379/0
+[2024-10-31 20:18:30,102: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:30,103: DEBUG/MainProcess] | Consumer: Starting Events
+[2024-10-31 20:18:30,103: WARNING/MainProcess] /usr/local/lib/python3.11/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-10-31 20:18:30,106: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:30,106: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2024-10-31 20:18:30,106: INFO/MainProcess] mingle: searching for neighbors
+[2024-10-31 20:18:31,119: INFO/MainProcess] mingle: all alone
+[2024-10-31 20:18:31,119: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:31,119: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2024-10-31 20:18:31,124: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:31,125: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2024-10-31 20:18:31,128: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:31,129: DEBUG/MainProcess] | Consumer: Starting Control
+[2024-10-31 20:18:31,133: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:31,134: DEBUG/MainProcess] | Consumer: Starting Heart
+[2024-10-31 20:18:31,136: DEBUG/MainProcess] ^-- substep ok
+[2024-10-31 20:18:31,136: DEBUG/MainProcess] | Consumer: Starting event loop
+[2024-10-31 20:18:31,137: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2024-10-31 20:18:31,138: INFO/MainProcess] celery@0f72ad7f09f8 ready.
+[2024-10-31 20:18:31,138: DEBUG/MainProcess] basic.qos: prefetch_count->64
+[2024-10-31 20:18:32,179: DEBUG/MainProcess] | Worker: Closing Hub...
+[2024-10-31 20:18:32,179: DEBUG/MainProcess] | Worker: Closing Pool...
+[2024-10-31 20:18:32,179: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2024-10-31 20:18:32,179: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2024-10-31 20:18:32,180: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2024-10-31 20:18:32,180: DEBUG/MainProcess] | Consumer: Closing Events...
+[2024-10-31 20:18:32,180: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2024-10-31 20:18:32,180: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2024-10-31 20:18:32,180: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2024-10-31 20:18:32,180: DEBUG/MainProcess] | Consumer: Closing Control...
+[2024-10-31 20:18:32,181: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2024-10-31 20:18:32,181: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2024-10-31 20:18:32,181: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2024-10-31 20:18:32,181: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2024-10-31 20:18:32,182: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2024-10-31 20:18:32,185: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2024-10-31 20:18:32,185: DEBUG/MainProcess] Canceling task consumer...
+[2024-10-31 20:18:32,186: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2024-10-31 20:18:32,188: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2024-10-31 20:18:32,188: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2024-10-31 20:18:32,188: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2024-10-31 20:18:32,188: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2024-10-31 20:18:33,219: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2024-10-31 20:18:33,219: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2024-10-31 20:18:33,220: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2024-10-31 20:18:33,220: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2024-10-31 20:18:33,220: DEBUG/MainProcess] Canceling task consumer...
+[2024-10-31 20:18:33,220: DEBUG/MainProcess] Closing consumer channel...
+[2024-10-31 20:18:33,220: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2024-10-31 20:18:33,220: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2024-10-31 20:18:33,221: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2024-10-31 20:18:33,222: DEBUG/MainProcess] removing tasks from inqueue until task handler finished

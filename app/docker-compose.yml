@@ -1,0 +1,39 @@
+services:
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  web:
+    container_name: web
+    build: .
+    command: uvicorn main:app --host 0.0.0.0 --port 9090 --reload
+    volumes:
+      - .:/app
+    ports:
+      - 9090:9090
+    restart: always
+    depends_on:
+      - redis
+
+  celery_worker:
+    container_name: celery_worker
+    build: .
+    command: celery -A celery_tasks worker --logfile=logs/celery.log --loglevel=debug
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+      - web
+
+  flower:
+    container_name: flower
+    build: .
+    command: celery -A celery_worker flower --port=5555
+    ports:
+      - 5555:5555
+    depends_on:
+      - web
+      - redis
+      - celery_worker
